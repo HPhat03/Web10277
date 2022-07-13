@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+h1{
+    font-family: "Benguiat Bold";
+    padding: 9px;
+    text-align: center;
+    color: rgb(39, 27, 27);
+    text-shadow: 5px 5px 5px rgb(105, 102, 102);
+}
+
+.menu{
+    padding: 8px;
+    background-color: rgb(39, 27, 27);
+}
+
+a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    margin-left: 0.5em;
+}
+
+a.menu:hover{
+    color: yellow;
+    font-size: large;
+}
+
+body>img{
+    float: right;
+}
+button {
+    background-color: rgb(39, 27, 27);
+    color: white;
+    padding:10px;
+    border-radius: 10px;
+}
+
+button:hover{
+    background-color: wheat;
+    color:rgb(39, 27, 27);
+    border: 2px solid rgb(39, 27, 27);
+}
