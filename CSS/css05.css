@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+@keyframes BANNER {
+    0%{background-color: blue;}
+    25%{background-color: blueviolet;}
+    50%{background-color: brown;}
+    75%{background-color: red;}
+    100%{background-color: royalblue;}
+}
+.banner{
+    text-align: center;
+    padding: 20px;
+    font-size: 2em;
+    text-shadow: 5px 5px 5px rgb(184, 183, 183);
+    animation: BANNER 3s infinite;
+    line-height: 1.5em;
+    color: white;
+    margin-top: 10px;
+}
+@keyframes pic {
+    0%{background-image: url("../images/1.jpg");}
+    25%{background-image: url("../images/2.jpg");}
+    50%{background-image: url("../images/3.jpg");}
+    75%{background-image: url("../images/4.jpg");}
+    100%{background-image: url("../images/1.jpg");}
+}
+div{
+    margin: 20px;
+    font-family: "DFVN Onteal";
+}
+div div{
+    display: flex;
+    float: left;
+    justify-content: center;
+    font-size: x-large;
+    background-color: rgb(47, 117, 223);
+    padding: 20px;
+    color: yellow;
+    width: 120px;
+    height: 120px;
+    line-height: 5;
+}
+
+div div:first-of-type{
+    animation: pic 3s infinite;
+    border: 5px solid red;
+}
+
+div div:nth-of-type(2)
+{
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: 5px dashed rgb(4, 4, 121);
+}
+
+div div:nth-of-type(3)
+{
+    background-clip:padding-box;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 5px dotted violet;
+}
+
+@keyframes Rotate 
+{
+    0%{transform: rotate(90deg);}
+    25%{transform: rotate(180deg);}
+    50%{transform: rotate(270deg);}
+    75%{transform: rotate(360deg);}
+    100%{transform: rotate(0deg);}    
+}
+
+div div:last-of-type{
+    animation: Rotate 4s infinite;
+    background-color: darkblue;
+}

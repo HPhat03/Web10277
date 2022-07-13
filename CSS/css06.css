@@ -20,7 +20,7 @@ a{
     margin-left: 0.5em;
 }
 
-a.menu:hover{
+a:hover{
     color: yellow;
     font-size: large;
 }
