@@ -1,6 +1,11 @@
+*{
+    padding:0px;
+    margin: 0px;
+}
+
 body{
     background: linear-gradient(to right bottom,rgb(24, 24, 194) 20%, rgb(218, 35, 111) 80%);
-    height: 100%;
+    min-height: 100vh;
     width: 100%;
     background-repeat: no-repeat;
     font-family: "Baloo Paaji 2";
@@ -120,10 +125,7 @@ div.selector:hover{
     border: 5px dashed rgb(250,196,39);
 }
 
-*{
-    padding:0px;
-    margin: 0px;
-}
+
 div.footer{
     background-color: black;
     color: white;
@@ -133,4 +135,71 @@ div.footer{
     padding-bottom: 10px;
     font-size: smaller;
     text-align: center;
+}
+/*Cac muc sach*/
+.menu {
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+}
+
+.menu li{
+    
+    display: inline-block;
+    margin-left: 40px;
+}
+ .menu a{
+    color: white;
+    font-weight: bold;
+    font-size: large;
+}
+
+.menu a:hover{
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+}
+
+.content2{
+    animation: fade 3s linear;
+    display: inline-block;
+    width: 90%;
+    min-height: fit-content;
+    background-color: black;
+    margin-left: 5.5%;
+    box-shadow: 10px 10px 10px rgb(96, 6, 156);
+    margin-top: 50px;
+}
+.content2 div a
+{
+    color: white;
+}
+
+.content2 img{
+    display: inline-block;
+    min-height: 100%;
+    width: 50%;
+    margin: 50px;
+}
+.content2 div{
+    display: inline-block;
+    min-width: 357px;
+}
+.content2 div a{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 40px;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 25px;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.content2 div a:hover{
+    background-color: black;
+    color: rgb(250,196,39);
+    border: 2px solid rgb(250,196,39);
 }
