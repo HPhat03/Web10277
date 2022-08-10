@@ -119,7 +119,7 @@ a:link, :visited{
     text-decoration: none;
 }
 div.selector{
-    transition: all 1s;
+    transition: all .3s;
 }
 div.selector:hover{
     background-color: rgb(238, 238, 156);
