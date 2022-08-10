@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+<body>
+    <label for="input">Nhập giá trị: </label>
+    <input type="text" id="input" required value="20,50,70,90,40,30"/>
+    <button onclick="Draw()">Draw Chart</button><br>
+    <canvas id="canvas"></canvas>
+    <script>
+        function Draw(){
+            var xValues = document.getElementById("input").value.split(",");
+            var yValues =[];
+            for(var i = 0; i<xValues.length; i++)
+                yValues[i]=xValues[i];
+            var bar = [];
+            for(var i = 0; i<xValues.length; i++)
+                bar[i] = "rgb(" + Math.floor(Math.random()*300)%256 + "," +  Math.floor(Math.random()*300)%256 +
+                            "," +  Math.floor(Math.random()*300)%256 + ")";
+            
+                        new Chart("canvas", {
+                        type: "pie",
+                        data: {
+                            labels: xValues,
+                            datasets: [{
+                            backgroundColor: bar,
+                            data: yValues
+                            }]
+                        },
+                        options: {
+                            title: {
+                            display: true,
+                            text: "Random Chart"
+                            }
+                        }
+                        });
+        }
+    </script>
+</body>
+</html>

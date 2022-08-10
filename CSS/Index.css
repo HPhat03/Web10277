@@ -2,13 +2,19 @@
     padding:0px;
     margin: 0px;
 }
-
+html{
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: Baloo;
+    src: url(../font/BalooPaaji2-Bold.ttf);
+}
 body{
     background: linear-gradient(to right bottom,rgb(24, 24, 194) 20%, rgb(218, 35, 111) 80%);
     min-height: 100vh;
     width: 100%;
     background-repeat: no-repeat;
-    font-family: "Baloo Paaji 2";
+    font-family: Baloo;
 }
 
 @keyframes fade {
@@ -19,6 +25,8 @@ body{
     100% {opacity: 100%; transform: translateY(0px);}
 }
 .info{
+    display:flex;
+    justify-content: space-between;
     height: 100px;
     padding: 0px;
 }
@@ -27,30 +35,22 @@ body{
     margin-top: 20px;
     margin-left: 35px;
     font-size: x-large;
-    display: inline-block;
     font-weight: bold;
-    color: whitesmoke;
+    color: rgb(245, 245, 245);
     background-color: transparent;
     text-align: left;
     padding: 0px;
-    width: 40%;
     height: 40px;
-    
 }
 
 p.right{
     font-size: x-large;
-    text-align: right;
-    width: 50%;
+    padding-right: 50px;
     height: 40px;
     margin-left: 0px ;
     text-decoration: underline;
 }
 
-p.right:nth-of-type(3){
-    width: 10%;
-    margin-left: 10px;
-}
 
 .welcome p{
     font-size: 4em;
@@ -73,7 +73,7 @@ p.right:nth-of-type(3){
     font-weight: bold;
     font-family: "Baloo Paaji 2";
     transition: width 0.5s, height 0.5s, font-size 0.5s;
-    animation: fade 2s linear;
+    animation: fade 1s linear;
 }
 
 .welcome button:hover{
@@ -90,8 +90,9 @@ p.right:nth-of-type(3){
     width: 65%;
     height: 100%;
     margin-top: 100px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.212);
     border: 5px solid white;
+    color: white;
     border-radius: 25px;
     margin-left: 17.5%;
     box-shadow: 10px 10px 10px rgb(96, 6, 156);
@@ -118,14 +119,19 @@ a:link, :visited{
     text-decoration: none;
 }
 div.selector{
-    transition: width 1s, height 1s;
+    transition: all 1s;
 }
 div.selector:hover{
     background-color: rgb(238, 238, 156);
     border: 5px dashed rgb(250,196,39);
 }
 
-
+.footer hr{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
+}
 div.footer{
     background-color: black;
     color: white;
@@ -187,12 +193,13 @@ div.footer{
 .content2 div a{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 400px;
     height: 40px;
     background-color: black;
     border: 2px solid white;
     border-radius: 10px;
-    margin: 25px;
+    margin: 30px;
     padding: 20px;
     font-weight: bold;
     font-size: 1.5em;

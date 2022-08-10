@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript 12</title>
+</head>
+<body onLoad="draw()">
+    <canvas id="canvas" width="400" height="400"></canvas>
+    <script>
+        function draw(){
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext('2d');
+
+            ctx.fillStyle = "rgb(229,164,0)";
+            ctx.fillRect(0,0,400,400);
+
+            //circle
+            ctx.beginPath();
+            ctx.arc(200,200,200,0,2*Math.PI)
+            var grd = ctx.createLinearGradient(0,0,0,canvas.height)
+            grd.addColorStop(0,"rgb(2,114,2)");
+            grd.addColorStop(0.5,"rgb(1,71,1)");
+            grd.addColorStop(1,"rgb(2,114,2)");
+            ctx.fillStyle = grd;
+            ctx.fill();
+            ctx.lineWidth = "3";
+            ctx.strokeStyle = "rgb(97,154,70)"; 
+            ctx.stroke();
+
+            //polygon
+
+            ctx.beginPath();
+            ctx.moveTo(200,0);
+            ctx.lineTo(400,200);
+            ctx.lineTo(200,400);
+            ctx.lineTo(0,200);
+            ctx.lineTo(200,0);
+            ctx.fillStyle = "rgb(173,138,56)";
+            ctx.lineWidth = "5";
+            ctx.strokeStyle = "green";
+            ctx.fill();
+            ctx.stroke();
+            
+            //text
+
+            ctx.font="80px Arial"
+            ctx.lineWidth = "4";
+            ctx.strokeStyle = "green";
+            ctx.strokeText("HTML5",canvas.width /5-10, canvas.height /2 +20);
+        }
+    </script>
+</body>
+</html>

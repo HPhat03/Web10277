@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript 11</title>
+    <style>
+        .small{width: 125px; height: 83px; transition: all 1s;}
+        .medium{width: 500px; height: 334px; transition: all 1s;}
+        .large{width: 800px; height: 468px; transition: all .6s;}
+    </style>
+    <script>
+        function resize(value){
+            document.getElementById("img").className = value;
+        }
+    </script>
+</head>
+<body>
+    <h1>Image Resizing</h1>
+    <hr width="100%">
+    <div>Scale 
+        <input type="radio" name="scale" value="small" onclick="resize(this.value)">10%
+        <input type="radio" name="scale" value="medium" onclick="resize(this.value)">25%
+        <input type="radio" name="scale" value="large"  checked onclick="resize(this.value)">50%
+    </div>
+    <img src="images/banhmi.jpg" class="large" id="img">
+</body>
+</html>

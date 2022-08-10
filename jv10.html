@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript 10</title>
+    <style>
+        h1{
+            width: fit-content;
+            padding: 0 20px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            background-color: #ff0000;
+            color: #ffff80;
+            transition: all 1s;
+        }
+    </style>
+    <script>
+        function Apply(){
+            document.getElementById("sample").innerHTML = document.getElementById("h1").value;
+            document.getElementById("sample").style.backgroundColor = document.getElementById("bgcl").value;
+            document.getElementById("sample").style.color = document.getElementById("cl").value;
+        }
+    </script>
+</head>
+<body>
+    <h1 id="sample">Welcome HTML5!</h1>
+    <div>
+        <label for="h1">Nhập nội dung: </label>
+        <input type="text" id="h1" value="Welcome HTML5!">
+        <label for="bgcl">Màu nền: </label>
+        <input type="color" id="bgcl" value="#ff0000">
+        <label for="cl">Màu chữ: </label>
+        <input type="color" id="cl" value="#ffff80">
+        <br><button onclick="Apply()">Apply</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript 06</title>
+    <script src="JS/jv06.js"></script>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h1>ĐĂNG KÝ THÀNH VIÊN</h1>
+        <form style="display: inline-block;" name="Form">
+        <table border="1" style="text-align: left;">
+            <tr>
+                <td>Tên đăng nhập: </td>
+                <td><input type="text" id="username"></td>
+            </tr>
+            <tr>
+                <td>Mật khẩu: </td>
+                <td><input type="password" id="password"></td>
+            </tr>
+            <tr>
+                <td>Ngày sinh: </td>
+                <td><input type="date" id="date"></td>
+            </tr>
+            <tr>
+                <td>Giới tính: </td>
+                <td>
+                    <input type="radio" id="gd" name="gender" value="male"><label>Nam</label>
+                    <input type="radio" id="gd" name="gender" value="female"><label>Nữ</label>    
+                </td>
+            </tr>
+            <tr>
+                <td>vấn đề bạn quan tâm: </td>
+                <td><select id="ch">
+                    <option></option>
+                    <option>Công nghệ thông tin.</option>
+                    <option>Quản trị kinh doanh.</option>
+                    <option>Tài chính ngân hàng</option>
+                    <option>Kế toán - Kiểm toán</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Đăng Ký" onclick="print(); return false;"></td>
+                <td><input type="reset" value="Hủy"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><textarea readonly id="result" style="text-overflow: auto; width:96%; height:100px;"></textarea></td>
+            </tr>
+        </table>
+        </form>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Javascript 07</title>
+        <script src="JS/jv07.js"></script>
+    </head>
+    <body>
+        <div style="text-align:center;">
+            <h1 id="title">CHƯƠNG TRÌNH XỬ LÝ CHUỖI </h1>
+            <label for="S1">Chuỗi S1: </label><input id="S1" type="text" value="Learning JAVASCRIPT iS VERY eaSY!" size="50"><br>
+            
+            <label for="S2">Chuỗi S2: </label><input id="S2" type="text" value="Javascript"><br>
+            <label for="S3">Chuỗi S3: </label><input id="S3" type="text" value="jQuery"><br>
+            <label for="index">vị trí chèn:</label><input id="index" type="text" value="0" size="1"><br>
+            <br>
+            <button type="button" onclick="normal()">Chuẩn hóa chuỗi</button>
+            <button type="button" onclick="reverse()">Đảo chuỗi</button>
+            <button type="button" onclick="Original()">khôi phục</button><br>
+            <button type="button" onclick="replace1()">thay thế S2 bằng S3</button>
+            <button type="button" onclick="insert()">Chèn S2 vào S1</button>
+            <button type="button" onclick="delete1()">Xóa S2 trong S1</button>
+        </div>
+        <script>
+            setInterval(flip,500);
+            origin = document.getElementById("S1").value;
+        </script>
+    </body>
+    </html>

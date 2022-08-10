@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript 09</title>
+    <script>
+        function Create(){
+            var n = parseInt(document.getElementById("input").value);
+            A = new Array(n);
+            for(var i =0; i<n; i++)
+                A[i]=Math.floor(Math.random()* 100)%50;
+                console.log(A);
+            document.getElementById("origin").value = A.join(" ");
+        }
+
+        function Des(a, b){
+            return b-a;
+        }
+
+        function AscSort()
+        {
+            A.sort();
+            document.getElementById("Ascend").value = A.join(" ");
+        }
+
+        function DesSort()
+        {
+            A.sort(Des);
+            document.getElementById("Descend").value = A.join(" ");
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <label for="input">Nhập số phần tử: </label>
+        <input type="number" id="input"><br>
+        <button onclick="Create()">Tạo mảng</button>
+        <button onclick="AscSort()">Sắp xếp mảng tăng</button>
+        <button onclick="DesSort()">Sắp xếp giảm dần</button><br>
+        <label for="origin">Mảng ban đầu: </label><input type="text" id="origin"><br>
+        <label for="Ascend">Mảng tăng dần: </label><input type="text" id="Ascend"><br>
+        <label for="Descend">Mảng giảm dần: </label><input type="text" id="Descend">
+    </div>
+
+</body>
+</html>

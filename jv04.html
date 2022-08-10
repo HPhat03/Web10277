@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript 04</title>
+    <script src="JS/jv04.js" defer></script>
+</head>
+<body>
+    <form name="Form">
+        <table border="1">
+            <tr>
+                <td colspan="2"><h2>CÁC PHÉP TÍNH SỐ HỌC</h2></td>
+            </tr>
+            <tr>
+                <td>Số thứ 1: </td>
+                <td><input type="text" id="a"></td>
+            </tr>
+
+            <tr>
+                <td>Số thứ 2: </td>
+                <td><input type="text" id="b"></td>
+            </tr>
+
+            <tr>
+                <td>Số thứ 1: </td>
+                <td><input type="radio" id="kq" name="choice" value="+"><label>Cộng</label>
+                <br><input type="radio" id="kq" name="choice" value="-"><label>Trừ</label>
+                <br><input type="radio" id="kq" name="choice" value="*"><label>Nhân</label>
+                <br><input type="radio" id="kq" name="choice" value="/"><label>Chia</label></td>
+            </tr>
+
+            <tr>
+                <td><button type="button" onclick="Solve()">Thực hiện</button></td>
+                <td><input type="text" id="solve" readonly></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
