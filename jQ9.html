@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>jquery 09</title>
+    <style>
+        body{
+            display: flex;
+        }
+        body> div{
+            width: 40%;
+            border: 2px solid black;
+            margin: 10px;
+            padding: 5px;
+        }
+        #result{
+            text-align: center;
+            line-height: 250px;
+            font-size: 2em;
+        }
+        .shadow{
+            text-shadow: 5px 5px 5px black;
+        }
+    </style>
+    <script>
+        $().ready(function(){
+            arr = [];
+            $(" li").click(function(){
+                $("div#result").text($(this).text());
+            });
+
+            $("#norm").click(function(){
+                $("#result").removeClass("shadow");
+            })
+
+            $("#shadow").click(function(){
+                $("#result").addClass("shadow");
+            })
+
+            $("#color").change(function(){
+                $("#result").css("color",$(this).val());
+            })
+
+            $("#delete").click(function(){
+                var text = $("li:last").text();
+                if(text == "") return;
+                arr.unshift(text);
+                $("li:last").remove();
+            })
+
+            $("#recover").click(function(){
+                console.log(arr);
+                if(arr.length== 0) return;
+                var item = "<li>" + arr.shift() + "</li>";
+                $("ol").append(item);
+                $(" li").click(function(){
+                $("div#result").text($(this).text());
+            });
+            })
+        });
+
+
+    </script>
+</head>
+<body>
+    <div class="control">
+        <form action="" name="control" >
+            <fieldset>
+            <legend>Chọn</legend>
+            <input type="radio" id="norm" name="type" value="normal" checked>Chữ Bình thường<br>
+            <input type="radio" id="shadow" name="type" value="shadow">Chữ có bóng<br>
+            <label for="color">Chọn màu chữ: </label><input id="color" type="color"><br>
+            <button id="delete" type="button">Xóa phần tử cuối</button>
+            <button id="recover" type="button">Phục hồi</button>
+        </fieldset>
+        <fieldset>
+            <legend>Click vào một chuỗi</legend>
+            <ol type="1">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JQUERY</li>
+                <li>JAVASCRIPT</li>
+            </ol>
+        </fieldset>
+        </form>
+    </div>
+    <div id="result">HTML</div>
+</body>
+</html>

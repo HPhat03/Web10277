@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>jquery 04</title>
+    <style>
+        div div{
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+        }
+
+        .blue{
+            background-color: blue;
+        }
+
+        .red{
+            background-color: red;
+        }
+
+        .pink{
+            background-color: pink;
+        }
+
+        .green{
+            background-color: green;
+        }
+
+        #result{
+            width: 300px;
+            height: 300px;
+            border: 5px solid gray;
+        }
+    </style>
+    <script>
+        $().ready(function(){
+            $("div div").click(function(){
+                var S="";
+                var t = $(this).css("backgroundColor");
+                if(t == "rgb(0, 0, 255)") 
+                    S = "Xanh";
+                if(t == "rgb(255, 0, 0)") 
+                    S = "Đỏ";
+                if(t == "rgb(255, 192, 203)") 
+                    S = "Hồng";
+                if(t == "rgb(0, 128, 0)") 
+                    S = "Xanh lá cây";
+                $("#result").css("backgroundColor",t);
+                $("#chosen").css("color",t);
+                $("#chosen").html("Màu của bạn chọn: " + S + " - " + t);
+            })
+        })
+    </script>
+</head>
+<body> 
+    <span>Click lên các hình vuông: </span>
+    <div>
+    <div class="blue"></div>
+    <div class="red"></div>
+    <div class="pink"></div>
+    <div class="green"></div>
+    </div>
+    <br>
+    <p id="chosen">Màu của bạn chọn: </p>
+    <div id="result"></div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>jquery 02</title>
+</head>
+<body>
+    <h1>Tính số ngày giữa hai thời điểm</h1>
+    <label for="start">Từ ngày:</label>
+    <input type="date" id="start">
+    <br>
+    <label for="end">Đến ngày:</label>
+    <input type="date" id="end">
+    <br><button>Tính số ngày</button>
+    <p id="result"></p>
+    <script>
+        $("button").click(function(){
+            var first = new Date($("#start").val());
+            var last = new Date($("#end").val());
+            var s = Math.round((last.getTime()-first.getTime())/(24*60*60*1000));
+            $("#result").html("Số ngày: "+ s);
+        });
+    </script>
+</body>
+</html>

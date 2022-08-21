@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>jquery 06</title>
+    <style>
+        #frame{
+            border: 1px solid black;
+            width: 500px;
+            min-height: 300px;
+            position: relative;
+        }
+
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+
+        #control {
+            position: relative;
+            width: 500px;
+            height: 200px;
+            border: 3px
+        }
+
+        button{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90px;
+            height: 20px;
+        }
+        #down{
+            top: 40px;
+        }
+
+        #left{
+            top: 20px;
+            left: 160px;
+        }
+
+        #right{
+            top: 20px;
+            left: 340px;
+        }
+
+    </style>
+    <script>
+        $().ready(function(){
+            var top = $("#box").css("top");
+            var left = $("#box").css("left");
+            $("#right").click(function(){
+                var t = $("#frame").width()-$("#box").width();
+                $("#box").animate({
+                    left: t
+                })
+            });
+            $("#left").click(function(){
+                $("#box").animate({
+                    left: "0px"
+                })
+            });
+            $("#up").click(function(){
+                $("#box").animate({
+                    top: "0px"
+                })
+            });
+            $("#down").click(function(){
+                var t = $("#frame").height()-$("#box").height();
+                $("#box").animate({
+                    top: t
+                })
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="frame">
+        <div id="box"></div>
+    </div>
+    <div id="control">
+    <button id="right">move right</button>
+    <button id="left">move left</button>
+    <button id="up">move up</button>
+    <button id="down">move down</button>
+    </div>
+</body>
+</html>

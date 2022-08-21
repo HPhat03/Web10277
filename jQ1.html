@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>jquery 01</title>
+</head>
+<body>
+    <label for="sub">Tên môn học: </label>
+    <input type="text" id="sub" size="20">
+    <br>
+    <ul>
+        <li>Python</li>
+        <li>PHP</li>
+    </ul>
+    <button type="button">Thêm môn học</button>
+    <script>
+        $("button").click(function(){
+            $("ul").append("<li>"+ $("#sub").val()+"</li>");
+        });
+    </script>
+</body>
+</html>

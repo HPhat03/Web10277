@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>jquery 07</title>
+    <style>
+        div.container{
+            display: flex;
+        }
+        div div{
+            width: 20%;
+            height: 100px;
+            background: rgb(221,221,221);
+            text-align: center;
+            line-height: 100px;
+            font-size: 2em;
+            color: gray;
+            transition: all .6s;
+        }
+
+        .chosen{
+            background: linear-gradient(to right, gray, white, gray );
+            color: black;
+        }
+    </style>
+    <script>
+        $().ready(function(){
+            $("div div").mouseover(function(){
+                $(this).animate({
+                    width: "+=150px",
+                    fontWeight: 900,
+                    fontSize: "4em"
+                });
+                $(this).addClass("chosen");
+            })
+            .mouseout(function(){
+                $(this).animate({
+                    width: "20%",
+                    fontWeight: 500,
+                    fontSize: "2em"
+                });
+                $(this).removeClass("chosen");
+            })
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</body>
+</html>

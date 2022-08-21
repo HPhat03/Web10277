@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>jquery 01</title>
+    <style>
+        body{
+            position: relative;
+        }
+        #box
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 30px;
+            background-color: blue;
+        }
+    </style>
+    <script>
+        $().ready(function(){
+            move = false;
+            $("#box").mousedown(function(e){
+                preX = e.pageX - this.offsetLeft;
+                preY = e.pageY - this.offsetTop;
+                move = true;
+                console.log(preX, preY);
+            });
+            $("#box").mousemove(function(e){
+                if(move){
+                    var curX = e.pageX - this.offsetLeft;
+                    var curY = e.pageY - this.offsetTop;
+                    console.log(curX, curY)
+                    var dx = curX - preX;
+                    var dy = curY - preY;
+                    console.log(dx, dy)
+                    var CircleX = parseInt($(this).css("left"));
+                    var CircleY = parseInt($(this).css("top"));
+                    var Newleft = CircleX + dx + "px";
+                    var Newtop = CircleY + dy + "px";
+                     console.log(Newleft, Newtop)
+                     $(this).css("left",Newleft);
+                     $(this).css("top",Newtop);
+                }
+            })
+            $("#box").mouseup(function(){
+                move = false;
+            });
+
+            $("body").on("keydown",function(){
+                var CircleX = parseInt($("#box").css("left"));
+                var CircleY = parseInt($("#box").css("top"));
+                console.log(CircleX, CircleY);
+                var newleft = CircleX + "px";
+                var newtop = CircleY +"px";
+                
+                switch(event.which){
+                    case 37: //left
+                        newleft = CircleX - 5 + "px";
+                        break;
+                    case 38://up
+                        newtop = CircleY - 5 + "px";
+                        break;
+                    case 39:
+                        newleft = CircleX + 5 + "px";
+                        break;
+                    case 40:
+                        newtop = CircleY + 5 + "px";
+                        break;
+                }
+                $("#box").css("left",newleft);
+                $("#box").css("top", newtop);
+            })
+
+        })
+    </script>
+    </head>
+<body>
+    <div id="box"></div>
+</body>
+</html>

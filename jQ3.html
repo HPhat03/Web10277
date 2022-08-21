@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $().ready(function(){
+        $("#change").click(function(){
+            $("tr:odd").addClass("color");
+        });
+        $("#origin").click(function(){
+            $("tr:odd").removeClass("color");
+        })
+    });
+    </script>
+    <title>jquery 03</title>
+    <style>
+        table, tr, td{
+            text-align: left;
+            width: 30%;
+        }
+        table tr:first-of-type{
+            background-color: rgb(199, 247, 229);
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .color{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h3>BẢNG GIÁ VẬT TƯ</h3>
+        <table style="display: inline-block; border-collapse: collapse;" border="1">
+            <tr>
+                <td>Tên vật tư</td>
+                <td>Đơn vị tính</td>
+                <td>Đơn giá</td>
+            </tr>
+            <tr>
+                <td>Cát</td>
+                <td>Khối</td>
+                <td>77,000</td>
+            </tr>
+            <tr>
+                <td>Đá</td>
+                <td>Khối</td>
+                <td>90,000</td>
+            </tr>
+            <tr>
+                <td>Xi măng Hà Tiên loại 1</td>
+                <td>Bao</td>
+                <td>120,000</td>
+            </tr>
+            <tr>
+                <td>Xi măng Hà Tiên loại 2</td>
+                <td>Bao</td>
+                <td>100,000</td>
+            </tr>
+        </table>
+        <br>
+        <button id="change">Đổi màu nền</button>
+        <button id="origin">Màu nền mặc định</button>
+    </div>
+</body>
+</html>
